@@ -9,9 +9,11 @@ get '/' do
     #{request.inspect.split(',').join("\n\t\t")}
 
 
-  request.scheme: #{request.scheme}
+  scheme: #{request.scheme}
 
-  request.host: #{request.host}
+  host: #{request.host}
+
+  request.url: #{request.url}
   
   </pre>
   EOT
