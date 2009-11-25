@@ -3,10 +3,16 @@ require 'sinatra'
 
 get '/' do
   <<-EOT
-  request.inspect: #{request.inspect}
+  <pre>
+  request.inspect: 
+
+    #{request.inspect.split(',').join("\n\t\t")}
+
+
   request.scheme: #{request.scheme}
+
   request.host: #{request.host}
-  request.path: #{request.path}
-  request.port: #{request.port}
+  
+  </pre>
   EOT
 end
